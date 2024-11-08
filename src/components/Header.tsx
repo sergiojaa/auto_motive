@@ -10,10 +10,12 @@ export default function Header() {
   };
 
   return (
-    <div className="flex items-center justify-between top-0  p-4 absolute z-10 w-[100%]">
+    <div className="flex lg:justify-between items-center justify-between top-0 p-4 absolute z-10 w-[100%]">
       {/* Logo on the Left */}
       <div className="flex items-center">
-        <img className="w-[60px] ml-[20px]" src={logo} alt="Company Logo" />
+        <Link to={'/'}>
+        <img className="w-[15%] mt-[20px] lg:ml-[150px] ml-[20px]" src={logo} alt="Company Logo" />
+        </Link>
       </div>
 
       {/* Three-line Hamburger Icon on the Right */}
@@ -29,12 +31,16 @@ export default function Header() {
       </button>
 
       {/* Navigation Links - Positioned Above the Hamburger Icon */}
-      <div className={`${isMenuOpen ? 'flex' : 'hidden'} absolute bottom-full left-1/2 transform -translate-x-1/2 lg:static lg:flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 mb-4 lg:mb-0`}>
-        <Link to="/" className="text-white">Home</Link>
-        <Link to="/about" className="text-white">About</Link>
-        <Link to="/services" className="text-white">Services</Link>
-        <Link to="/calculator" className="text-white">Calculator</Link>
-        <Link to="/contact" className="text-white">Contact</Link>
+      <div
+        className={`${
+          isMenuOpen ? 'flex' : 'hidden'
+        } absolute  top-full left-1/2 text-[30px] transform -translate-x-1/2 lg:static lg:flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 mb-4 lg:mb-0 bg-red-900 lg:bg-transparent w-full lg:w-auto`}
+      >
+        <Link to="/" className="text-white  font-merriweather hover:text-gray-500 transition duration-300">Home</Link>
+        <Link to="/about" className="text-white font-merriweather hover:text-gray-500 transition duration-300">About</Link>
+        <Link to="/services" className="text-white font-merriweather hover:text-gray-500 transition duration-300">Services</Link>
+        <Link to="/calculator" className="text-white font-merriweather hover:text-gray-500 transition duration-300">Calculator</Link>
+        <Link to="/contact" className="text-white font-merriweather hover:text-gray-500 transition duration-300">Contact</Link>
       </div>
     </div>
   );

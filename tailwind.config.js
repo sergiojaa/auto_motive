@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        merriweather : ['Merriweather','serif']
+      },
+      fontFamily: {
+        crimsonpro : ["Crimson Pro", "serif"]
+      }
+    },
   },
   plugins: [],
 }
