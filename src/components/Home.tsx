@@ -32,7 +32,7 @@ export default function Home() {
         {/* Header Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-start text-center bg-black bg-opacity-50">
           <h1 className="w-[100px]  font-crimsonpro ml-[20px] font- lg:text-[50px] font-bold text-white md:ml-[140px] text-[35px]">
-            თქვენი საოცნებო მანქანები
+            თქვენთვის სასურველი მანქანები
           </h1>
         </div>
       </header>
