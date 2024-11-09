@@ -1,12 +1,27 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/automotive-logo.jpg';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const linkClasses = (path: string) => {
+    const isNotHomePage = location.pathname !== '/';
+
+    return isNotHomePage
+      ? 'text-black font-opensans  px-4 lg:px-0 transition duration-300'
+      : 'text-white font-opensans hover:text-gray-300 transition duration-300 px-4 lg:px-0';
+  };
+
+  const hamburgerClasses = location.pathname !== '/' ? 'text-black' : 'text-white';
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false); // Close the menu when a link is clicked
   };
 
   return (
@@ -14,19 +29,19 @@ export default function Header() {
       {/* Logo */}
       <div className="flex-shrink-0 lg:ml-[50px]">
         <Link to="/">
-          <img className="w-[15%] ml-2" src={logo} alt="Company Logo" />
+          <img className="max-w-[100px] ml-2" src={logo} alt="Company Logo" />
         </Link>
       </div>
 
       {/* Hamburger Icon (Visible on Small Screens) */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden text-white focus:outline-none"
+        className={`lg:hidden focus:outline-none ${hamburgerClasses}`}
       >
         <div className="space-y-1">
-          <div className="w-6 h-0.5 bg-white"></div>
-          <div className="w-6 h-0.5 bg-white"></div>
-          <div className="w-6 h-0.5 bg-white"></div>
+          <div className="w-6 h-0.5 bg-current"></div>
+          <div className="w-6 h-0.5 bg-current"></div>
+          <div className="w-6 h-0.5 bg-current"></div>
         </div>
       </button>
 
@@ -34,13 +49,13 @@ export default function Header() {
       <div
         className={`${
           isMenuOpen ? 'flex' : 'hidden'
-        } absolute lg:static top-full left-0 lg:flex text-[25px] flex-col lg:flex-row items-center lg:items-center lg:space-x-8 w-full lg:w-auto bg-red-900 lg:bg-transparent mt-2 lg:mt-0`}
+        } absolute lg:static font-opensans  top-full left-0 lg:flex text-[20px] flex-col lg:flex-row items-center lg:items-center lg:space-x-8 w-full lg:w-auto bg-red-900 lg:bg-transparent mt-2 lg:mt-0`}
       >
-        <Link to="/" className="text-white font-merriweather hover:text-gray-300 transition duration-300 px-4 lg:px-0">Home</Link>
-        <Link to="/about" className="text-white font-merriweather hover:text-gray-300 transition duration-300 px-4 lg:px-0">About</Link>
-        <Link to="/services" className="text-white font-merriweather hover:text-gray-300 transition duration-300 px-4 lg:px-0">Services</Link>
-        <Link to="/calculator" className="text-white font-merriweather hover:text-gray-300 transition duration-300 px-4 lg:px-0">Calculator</Link>
-        <Link to="/contact" className="text-white font-merriweather hover:text-gray-300 transition duration-300 px-4 lg:px-0 lg:pr-[50px]">Contact</Link>
+        <Link to="/" className={linkClasses('/')} onClick={handleLinkClick}>მთავარი</Link>
+        <Link to="/about" className={linkClasses('/about')} onClick={handleLinkClick}>ჩვენს შესახებ</Link>
+        <Link to="/services" className={linkClasses('/services')} onClick={handleLinkClick}>სერვისები</Link>
+        <Link to="/calculator" className={linkClasses('/calculator')} onClick={handleLinkClick}>კალკულატორი</Link>
+        <Link to="/contact" className={`${linkClasses('/contact')} lg:pr-[50px]`} onClick={handleLinkClick}>კონტაქტი</Link>
       </div>
     </div>
   );

@@ -11,6 +11,9 @@ export default {
       },
       fontFamily: {
         crimsonpro : ["Crimson Pro", "serif"]
+      },
+      fontFamily: {
+        opensans: [ "Open Sans", "sans-serif" ]
       }
     },
   },
