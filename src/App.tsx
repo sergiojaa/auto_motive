@@ -4,6 +4,9 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Services from "./components/Services"
+import Budget from "./components/Budget"
+import Under3k from "./components/Under3k"
+import Under5k from "./components/Under5k"
 
 
 
@@ -28,6 +31,18 @@ function App() {
         {
           path:'/services',
           element: <Services/>
+        },
+        {
+          path:'/budget',
+          element: <Budget/>
+        },
+        {
+          path:'/under3k',
+          element: <Under3k/>
+        },
+        {
+          path:'/under5k',
+          element: <Under5k/>
         }
       ]
     }

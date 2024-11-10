@@ -54,7 +54,7 @@ export default function Header() {
         <Link to="/" className={linkClasses('/')} onClick={handleLinkClick}>მთავარი</Link>
         <Link to="/about" className={linkClasses('/about')} onClick={handleLinkClick}>ჩვენს შესახებ</Link>
         <Link to="/services" className={linkClasses('/services')} onClick={handleLinkClick}>სერვისები</Link>
-        <Link to="/contact" className={`${linkClasses('/contact')} `} onClick={handleLinkClick}>ბიუჯეტი </Link>
+        <Link to="/budget" className={`${linkClasses('/budget')} `} onClick={handleLinkClick}>ბიუჯეტი </Link>
 
         <Link to="/calculator" className={linkClasses('/calculator')} onClick={handleLinkClick}>კალკულატორი</Link>
 
