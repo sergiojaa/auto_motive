@@ -14,7 +14,7 @@ export default function Header() {
     const isNotHomePage = location.pathname !== '/';
 
     return isNotHomePage
-      ? 'text-black font-opensans  px-4 lg:px-0 transition duration-300'
+      ? 'text-gray-500 text-[18px] font-bold  font-opensas  px-4 lg:px-0 transition duration-300'
       : 'text-white font-opensans hover:text-gray-300 transition duration-300 px-4 lg:px-0';
   };
 
@@ -29,7 +29,7 @@ export default function Header() {
       {/* Logo */}
       <div className="flex-shrink-0 lg:ml-[50px]">
         <Link to="/">
-          <img className="max-w-[100px] ml-2" src={logo} alt="Company Logo" />
+          <img className="max-w-[100px] md:ml-[50px] xl:ml-[120px] ml-2" src={logo} alt="Company Logo" />
         </Link>
       </div>
 
@@ -38,7 +38,7 @@ export default function Header() {
         onClick={toggleMenu}
         className={`lg:hidden focus:outline-none ${hamburgerClasses}`}
       >
-        <div className="space-y-1">
+        <div className="space-y-1 md:mr-[30px] ">
           <div className="w-6 h-0.5 bg-current"></div>
           <div className="w-6 h-0.5 bg-current"></div>
           <div className="w-6 h-0.5 bg-current"></div>
@@ -54,8 +54,12 @@ export default function Header() {
         <Link to="/" className={linkClasses('/')} onClick={handleLinkClick}>მთავარი</Link>
         <Link to="/about" className={linkClasses('/about')} onClick={handleLinkClick}>ჩვენს შესახებ</Link>
         <Link to="/services" className={linkClasses('/services')} onClick={handleLinkClick}>სერვისები</Link>
+        <Link to="/contact" className={`${linkClasses('/contact')} `} onClick={handleLinkClick}>ბიუჯეტი </Link>
+
         <Link to="/calculator" className={linkClasses('/calculator')} onClick={handleLinkClick}>კალკულატორი</Link>
+
         <Link to="/contact" className={`${linkClasses('/contact')} lg:pr-[50px]`} onClick={handleLinkClick}>კონტაქტი</Link>
+
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import personImage from '../images/person.webp'
 import oficeImage from '../images/ofice.webp'
 export default function About() {
   return (
-    <div className="mt-[130px]">
+    <div className="mt-[130px] bg-gray-200  ">
       <hr  />
       <div>
         <h1 className='pl-[20px] lg:pl-[240px] text-gray-500   mb-[20px] pt-[40px] md:pl-[90px] text-[25px] font-opensans font-bold'>ჩვენს შესახებ</h1>

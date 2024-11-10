@@ -23,14 +23,14 @@ export default function Home() {
     <div>
       {/* Header with dynamic background */}
       <header
-        className="relative w-full h-[780px] bg-cover bg-center"
+        className="relative w-full h-[780px]  bg-cover bg-center"
         style={{
           backgroundImage: `url(${arrayImages[currentIndex]})`,
           transition: 'background-image 1s ease-in-out',
         }}
       >
         {/* Header Content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-start text-center bg-black bg-opacity-50">
+        <div className="absolute  inset-0 flex flex-col justify-center items-start text-center bg-black bg-opacity-50">
           <h1 className="w-[100px]  font-crimsonpro ml-[20px] font- lg:text-[50px] font-bold text-white md:ml-[140px] text-[35px]">
             თქვენთვის სასურველი მანქანები
           </h1>
