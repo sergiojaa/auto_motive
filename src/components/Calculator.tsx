@@ -37,7 +37,7 @@ export default function Calculator() {
         <option value="Option 6">Canada</option>
         <option value="Option 7">Sublot Copart</option>
         <option value="Option 8">Sublot IAAI</option>
-
+        
         
         </select>
       </div>
