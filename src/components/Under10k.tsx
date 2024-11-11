@@ -1,11 +1,11 @@
 import React from 'react'
 import camryPhoto from '../images/camry.webp'
 
-export default function Under3k() {
+export default function Under10k() {
   return (
     <div className='mt-[130px] bg-gray-100'>
       <hr />
-      <h1 className='pl-[20px] lg:pl-[240px] text-gray-500   mb-[20px] pt-[40px] md:pl-[90px] text-[25px] font-opensans font-bold'>მაქნანები 3000$მდე </h1>
+      <h1 className='pl-[20px] lg:pl-[240px] text-gray-500   mb-[20px] pt-[40px] md:pl-[90px] text-[25px] font-opensans font-bold'>მაქნანები 10000$მდე </h1>
       
      
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -7,6 +7,8 @@ import Services from "./components/Services"
 import Budget from "./components/Budget"
 import Under3k from "./components/Under3k"
 import Under5k from "./components/Under5k"
+import Under10k from "./components/Under10k"
+import Calculator from "./components/Calculator"
 
 
 
@@ -43,6 +45,14 @@ function App() {
         {
           path:'/under5k',
           element: <Under5k/>
+        },
+        {
+          path:'/under10k',
+          element: <Under10k/>
+        },
+        {
+          path:'/calculator',
+          element: <Calculator/>
         }
       ]
     }

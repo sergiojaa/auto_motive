@@ -34,9 +34,9 @@ export default function Budget() {
         </div>
         <div className=" mt-[20px] flex items-center pl-[20px] lg:pl-[240px] ">
         <div className=" bg-white md:w-[40%]  md:ml-[70px] flex flex-col items-center justify-center  rounded-3xl  w-[150px]   ">
-            <Link to={'/under3k'}>
+            <Link to={'/under10k'}>
             <img className="w-[60px] mr-[30px] pb-[10px] pt-[25px] ml-[30px] " src="https://cardeal.ge/imgproxy/insecure/rs:fill:220:220:0/aHR0cHM6Ly9jYXJkZWFsLmdlL2ltZy9jYXRlZ29yaWVzL3VuZGVyMTBrLnBuZw.webp" alt="" />
-            <h2 className=" pb-[10px] font-opensans pl-[20px]">$1.000 მდე</h2>
+            <h2 className=" pb-[10px] font-opensans pl-[20px]">$10.000 მდე</h2>
             </Link>
            
             
