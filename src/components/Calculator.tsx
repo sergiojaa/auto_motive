@@ -1,4 +1,3 @@
-import logo from '../images/automotive-logo.jpg';
 
 export default function Calculator() {
   return (
