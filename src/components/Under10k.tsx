@@ -1,4 +1,3 @@
-import React from 'react'
 import camryPhoto from '../images/camry.webp'
 
 export default function Under10k() {

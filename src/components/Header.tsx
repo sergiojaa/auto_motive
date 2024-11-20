@@ -10,7 +10,7 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const linkClasses = (path: string) => {
+  const linkClasses = (_path: string) => {
     const isNotHomePage = location.pathname !== '/';
 
     return isNotHomePage

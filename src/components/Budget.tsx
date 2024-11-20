@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import xutik from '../images/5k.webp'
 export default function Budget() {
   return (
     

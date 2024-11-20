@@ -1,5 +1,4 @@
 import personImage from '../images/person.webp'
-import oficeImage from '../images/ofice.webp'
 export default function About() {
   return (
     <div className="mt-[130px] bg-gray-200  ">
